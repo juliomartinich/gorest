@@ -1,0 +1,25 @@
+REST
+----
+orientado a recursos, por eso usar sustantivos, no verbos; usar plural
+/libros
+
+la acción la pone el método (GET, POST, PUT, DELETE, PATCH)
+y usar el ID para un recurso específico
+GET    /libros           -- recupera los libros
+GET    /libros/123       -- recupera el libro 123
+POST   /libros           -- registra un nuevo libro
+PUT    /libros/123       -- reescribe el libro 123
+PATCH  /libros/123       -- reescribe parcialmente el libro 123
+DELETE /libros/123       -- borra el libro 123
+
+poner la versión en la URL
+/v1/libros
+
+usar parametros para filtrar y ordenar
+GET /libros?categoria=novela&autor=holmes
+
+usar codigos de error estándar
+
+usar JSON (no es obligatorio) e informarlo
+Content-Type: application/json
+
